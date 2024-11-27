@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XG - For You</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main-container">
+    <!-- Left Sidebar -->
+    <aside class="sidebar-left fixed-sidebar">
+      <div class="logo_div">
+        <img class="logo" src="images/XGlogo2.jpg" alt="Logo">
+      </div>
+      <nav class="menu">
+        <a href="newsfeed.html"><div class="icon"><img src="images/icons8-home-48.png" alt="Home Icon"> Home</div></a>
+        <a href="notifications.html"><div class="icon"><img src="images/icons8-notification-50.png" alt="Notifications Icon"> Notifications</div></a>
+        <a href="messages.html"><div class="icon"><img src="images/icons8-message-50.png" alt="Messages Icon"> Messages</div></a>
+        <a href="bookmarks.html"><div class="icon"><img src="images/icons8-bookmark-48.png" alt="Bookmarks Icon"> Bookmarks</div></a>
+        <a href="profile.html"><div class="icon"><img src="images/icons8-profile-48.png" alt="Profile Icon"> Profile</div></a>
+        <input type="search" placeholder="Search posts or accounts..." id="sidebar-search-bar">
+      </nav>
+      <button class="make_post_btn" id="make_post_btn" onclick="openPostPopup()">Make a Post</button>
+    </aside>
+
+    <!-- Center Feed -->
+    <main class="for_you_feed">
+      <header>
+        <h1>For You</h1>
+        <button id="theme-toggle" title="Toggle Dark/Light Mode">🌙</button>
+      </header>
+      <section id="feed">
+        <h2>For You</h2>
+        <div id="posts">
+          <!-- Posts will dynamically load here -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Right Sidebar -->
+    <aside class="sidebar-right fixed-sidebar">
+      <input type="search" placeholder="Search posts" id="right-search-bar">
+      <section id="trending">
+        <h2>Trends for You</h2>
+      </section>
+      <section id="suggested-users">
+        <h2>Suggested Users</h2>
+      </section>
+    </aside>
+  </div>
+
+  <!-- Popup Modal -->
+  <div id="post-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closePostPopup()">&times;</span>
+      <h2>Create a Post</h2>
+      <form id="post-form">
+        <textarea class="text_post" placeholder="What's on your mind?" id="caption" maxlength="1000"></textarea>
+        <label for="postImage">Upload Image or Video</label>
+        <input type="file" id="postImage" accept="image/*,video/*">
+        <div id="post-image-cropper-container">
+          <img id="post-image-preview" alt="Post Image Preview">
+          <button type="button" id="crop-post-image">Crop</button>
+        </div>
+        <button type="submit" class="submit-post">Post</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
