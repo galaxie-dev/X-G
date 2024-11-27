@@ -68,6 +68,130 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js">
+
+//     // Theme Toggle with Sun/Moon Icon
+// document.getElementById('theme-toggle').addEventListener('click', () => {
+//   document.body.classList.toggle('dark-mode');
+//   const isDarkMode = document.body.classList.contains('dark-mode');
+//   document.getElementById('theme-toggle').innerHTML = isDarkMode ? '☀️' : '🌙';
+// });
+
+// // Open and Close Post Popup
+// function openPostPopup() {
+//   document.getElementById('post-modal').style.display = 'flex';
+// }
+
+// function closePostPopup() {
+//   document.getElementById('post-modal').style.display = 'none';
+// }
+
+// // Load Profile Info
+// document.getElementById('profile-link').addEventListener('click', () => {
+//   document.getElementById('profile-info').style.display = 'block';
+// });
+
+// // Sample Data for Trending Hashtags and Suggested Users
+// function loadTrending() {
+//   const trendingSection = document.getElementById('trending');
+//   const trendingHashtags = ['#TrendingHashtag1', '#TrendingHashtag2', '#WebDev', '#Programming'];
+//   trendingSection.innerHTML = trendingHashtags.map(tag => `<p>${tag}</p>`).join('');
+// }
+
+// function loadSuggestedUsers() {
+//   const suggestedUsersSection = document.getElementById('suggested-users');
+//   const suggestedUsers = ['@suggestedUser1', '@suggestedUser2', '@developer'];
+//   suggestedUsersSection.innerHTML = suggestedUsers.map(user => `<p>${user}</p>`).join('');
+// }
+
+// window.onload = () => {
+//   loadTrending();
+//   loadSuggestedUsers();
+// };
+
+// // Sidebar Button Animations
+// document.querySelectorAll('.menu a').forEach(button => {
+//   button.addEventListener('mouseenter', () => {
+//     button.style.transform = 'scale(1.1)';
+//   });
+
+//   button.addEventListener('mouseleave', () => {
+//     button.style.transform = 'scale(1)';
+//   });
+// });
+
+// // Mobile View: Search Bar for Right Sidebar
+// const rightSidebar = document.querySelector('.sidebar-right');
+// document.getElementById('right-search-bar').addEventListener('input', () => {
+//   const searchValue = document.getElementById('right-search-bar').value.toLowerCase();
+//   Array.from(rightSidebar.querySelectorAll('p')).forEach(item => {
+//     if (item.textContent.toLowerCase().includes(searchValue)) {
+//       item.style.display = '';
+//     } else {
+//       item.style.display = 'none';
+//     }
+//   });
+// });
+
+// // Initialize Cropper for Image Upload
+// let cropper;
+// function setupCropper(inputId, imgId, cropButtonId) {
+//   document.getElementById(inputId).addEventListener('change', (e) => {
+//     const file = e.target.files[0];
+//     if (file && file.type.startsWith('image/')) {
+//       const img = document.getElementById(imgId);
+//       img.src = URL.createObjectURL(file);
+//       img.onload = () => {
+//         if (cropper) cropper.destroy();
+//         cropper = new Cropper(img, { aspectRatio: 1 });
+//       };
+//     }
+//   });
+
+//   document.getElementById(cropButtonId).addEventListener('click', () => {
+//     if (cropper) {
+//       const canvas = cropper.getCroppedCanvas();
+//       document.getElementById(imgId).src = canvas.toDataURL();
+//     }
+//   });
+// }
+
+// // Initialize Cropper for Post Image
+// setupCropper('postImage', 'post-image-preview', 'crop-post-image');
+
+// // Post Form Submission Handler
+// document.getElementById('post-form').addEventListener('submit', (e) => {
+//   e.preventDefault();
+//   const caption = document.getElementById('caption').value;
+//   const postImage = document.getElementById('post-image-preview').src;
+//   const postContainer = document.getElementById('posts');
+
+//   // Create Post Element with Header, Image, and Text
+//   const post = document.createElement('div');
+//   post.classList.add('post');
+//   post.innerHTML = `
+//     <div class="post-header">
+//       <img src="images/bellingham.jpg" alt="Profile Picture">
+//       <div>
+//         <span class="username">evansosumba</span><br>
+//         <span class="name">Evans Osumba</span>
+//       </div>
+//     </div>
+//     <p>${caption}</p>
+//     ${postImage ? `<img src="${postImage}" alt="Post Image" class="post-image">` : ''}
+//     <button class="comment-btn">Comment</button>
+//     <div class="comments">
+//       <input type="text" placeholder="Write a comment...">
+//     </div>
+//     <hr class="post-divider">
+//   `;
+
+//   // Append the new post and close the modal
+//   postContainer.prepend(post);
+//   closePostPopup();
+// });
+
+    
+  </script>
 </body>
 </html>
