@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-G</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="theme-light">
+    <div class="main-container">
+        <!-- Left Sidebar -->
+        <aside class="left-sidebar">
+            <div class="logo">
+                <h1>X-G</h1>
+            </div>
+            <nav class="main-nav">
+                <a href="#home" class="nav-item active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#explore" class="nav-item">
+                    <i class="fas fa-compass"></i>
+                    <span>Explore</span>
+                </a>
+                <a href="#notifications" class="nav-item">
+                    <i class="fas fa-bell"></i>
+                    <span>Notifications</span>
+                </a>
+                <a href="#messages" class="nav-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Messages</span>
+                </a>
+                <a href="#bookmarks" class="nav-item">
+                    <i class="fas fa-bookmark"></i>
+                    <span>Bookmarks</span>
+                </a>
+                <a href="#profile" class="nav-item">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </nav>
+            <button id="createPost" class="post-button">
+                <i class="fas fa-plus"></i>
+                <span>Create Post</span>
+            </button>
+            <div class="theme-toggle">
+                <button id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="posts-container">
+                <!-- Posts will be dynamically loaded here -->
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search X-G">
+            </div>
+            <div class="trends-card">
+                <h3>Trending Topics</h3>
+                <div class="trend-list">
+                    <!-- Trending topics will be loaded here -->
+                </div>
+            </div>
+            <div class="suggestions-card">
+                <h3>Who to follow</h3>
+                <div class="suggestions-list">
+                    <!-- Suggested users will be loaded here -->
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Post Creation Modal -->
+    <div id="postModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Create Post</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="post-creator">
+                    <img src="assets/default-avatar.png" alt="Profile Picture" class="profile-pic">
+                    <div class="post-input">
+                        <textarea placeholder="What's happening?"></textarea>
+                        <div class="media-preview">
+                            <!-- Preview of uploaded media will appear here -->
+                        </div>
+                        <div class="post-actions">
+                            <div class="media-buttons">
+                                <label for="mediaUpload" class="media-upload-btn">
+                                    <i class="fas fa-image"></i>
+                                </label>
+                                <input type="file" id="mediaUpload" multiple accept="image/*,video/*" hidden>
+                                <button class="emoji-btn">
+                                    <i class="far fa-smile"></i>
+                                </button>
+                            </div>
+                            <button class="post-btn">Post</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comment Modal -->
+    <div id="commentModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Reply</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="comment-creator">
+                    <img src="assets/default-avatar.png" alt="Profile Picture" class="profile-pic">
+                    <div class="comment-input">
+                        <textarea placeholder="Tweet your reply"></textarea>
+                        <button class="post-btn">Reply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>
